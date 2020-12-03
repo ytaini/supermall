@@ -1,0 +1,19 @@
+.tab-bar-item {
+  flex: 1;
+  /* 每个元素均等分*/
+
+  text-align: center;
+
+  height: 3.0625rem;
+
+  font-size: 16px;
+
+}
+
+.tab-bar-item img {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px;  /* 上边离父元素的px*/
+  vertical-align: middle; /* 消除图片下面多的3个px*/
+  margin-bottom: 1px; /* 元素下边里父元素的px*/
+}

@@ -1,0 +1,23 @@
+#tab-bar {
+  display: flex;
+  /* 元素里的所有元素水平分布*/
+
+  background-color: #f6f6f6;
+
+  position: fixed;
+  /* 使元素位置位于底部 下面3个样式都要*/
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* 设置元素阴影
+      第一个值：x方向偏移量
+      第二个值：y方向偏移量
+      第三个值：模糊程度
+      第四个值：阴影颜色
+        rgba的第四个值：透明度
+    */
+  box-shadow: 0 -2px 1px rgba(100, 100, 100, .1);
+
+}
+
