@@ -34,6 +34,8 @@
           click: true,
           pullUpLoad: true
         })
+        
+        // console.log(this.bs);
 
         this.bs.on('scroll',(position) => {
           // console.log('position :>> ', position);
@@ -49,10 +51,17 @@
         })
       }, 
       scrollTo(x ,y , time = 300) {
-        this.bs.scrollTo(x,y,time);
+        this.bs && this.bs.scrollTo(x,y,time);
       },
       finishPullUp() {
-        this.scroll.finishPullUp();
+        this.bs && this.bs.finishPullUp();
+      },
+      refresh() {
+        // console.log('refresh');
+        this.bs && this.bs.refresh();
+      },
+      getY() {
+        return this.bs.y
       }
     }
   }

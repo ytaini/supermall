@@ -135,7 +135,7 @@
 
         //正在滚动触发scroll事件
         this.bs.on('scroll',(position) => {
-          console.log('position :>> ', position);
+          console.log('当前位置 :>> ', position);
         })
         //滚动结束触发scrollEnd事件
         this.bs.on('scrollEnd',() => {
@@ -144,7 +144,7 @@
 
         //当滚动到底部时,触发pullingUp事件
         this.bs.on('pullingUp',() =>{
-          console.log('aaa');
+          console.log('滚动到底部');
           //发送网络请求，请求更多页的数据
 
           //等数据请求完成后,并且将新的数据展示出来后,

@@ -1,8 +1,8 @@
 <template>
-  <div class="goods-item">
-    <a :href="goodsItem.link">
-      <img :src="goodsItem.show.img" alt="">
-    </a>
+  <div class="goods-item"  @click="itemClick">
+
+    <img :src="goodsItem.show.img" alt="" @load="imageLoadFinish">
+      <!-- @load监听图片是否加载完成 -->
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
       <span class="price">{{goodsItem.price}}</span>
@@ -20,6 +20,23 @@ export default {
         return {}
       }
     }
+  },
+  methods: {
+    imageLoadFinish() {
+      this.$bus.$emit('imageLoadFinish')
+    },
+    itemClick() {
+
+      this.$router.push({
+        name: 'detail',
+        params: {
+          iid: this.goodsItem.iid
+        }
+      })
+      /*  */
+      // console.log(this.goodsItem);
+    }
+
   }
 
 }
